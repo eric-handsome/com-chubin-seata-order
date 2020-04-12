@@ -36,7 +36,7 @@ public class GlobalTransactionAspect implements Ordered {
 			Object target = point.getTarget();
 			Object this1 = point.getThis();
 			System.out.println(target.toString()+this1.toString());
-			 point.proceed(); //spring切面 这里会执行 LbDataSourceAspect的around方法
+			 point.proceed(); //spring切面   这里会执行 LbDataSourceAspect的around方法
 			 lbTransaction.setTransactionType(TransactionType.commit);
 		} catch (Throwable throwable) {
 			throwable.printStackTrace();
